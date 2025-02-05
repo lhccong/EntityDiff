@@ -38,9 +38,7 @@ User user1 = new User(...);
 UserDTO user2 = new UserDTO(...);
 
 // 判断属性是否完全相等
-        equator.
-
-isEquals(user1, user2);
+comparator.isEquals(user1, user2);
 
 // 获取不同的属性
 List<FieldInfo> diff = comparator.getDiffFields(user1, user2);
