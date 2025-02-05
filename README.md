@@ -29,19 +29,21 @@
 
 ## 调用方法
 
-这里提供了GetterBaseEquator和FieldBaseEquator两个实现类，分别对应基于getter方法和基于属性的比对器，可以根据自己的需要进行选择
+这里提供了 GetterBaseComparator 和 FieldBaseComparator 两个实现类，分别对应基于getter方法和基于属性的比对器，可以根据自己的需要进行选择
 
 ```java
-Equator equator = new GetterBaseEquator();
+Comparator comparator = new GetterBaseComparator();
 // 支持比对两个不同类型的对象，默认只比对两个类字段的交集，即两个类都有的字段才比对
 User user1 = new User(...);
 UserDTO user2 = new UserDTO(...);
 
 // 判断属性是否完全相等
-equator.isEquals(user1, user2);
+        equator.
+
+isEquals(user1, user2);
 
 // 获取不同的属性
-List<FieldInfo> diff = equator.getDiffFields(user1, user2);
+List<FieldInfo> diff = comparator.getDiffFields(user1, user2);
 ```
 
 # 扩展
